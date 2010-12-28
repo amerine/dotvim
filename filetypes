@@ -1,0 +1,23 @@
+"FILETYPE OPTIONS
+" use filetype plugins to determine indent settings
+filetype plugin indent on
+
+" ruby and yaml indentation
+autocmd FileType ruby,rdoc,cucumber,yaml,html,eruby set softtabstop=2 shiftwidth=2 tabstop=2
+autocmd BufNewFile,BufRead Gemfile     setfiletype ruby
+autocmd BufNewFile,BufRead config.ru   setfiletype ruby
+
+" markdown files
+autocmd BufRead,BufNewFile *.mkd,*.markdown,*.md,*.mdown,*.mkdn set softtabstop=4 shiftwidth=4 tabstop=4
+autocmd BufRead,BufNewFile *.mkd,*.markdown,*.md,*.mdown,*.mkdn set noexpandtab
+
+" set filetype on config files
+autocmd BufNewFile,BufRead ~/.vim/*  setfiletype vim
+
+" set the snippets for rails/ruby projects
+autocmd vimenter * call s:SetupSnippets()
+function! s:SetupSnippets()
+  call ExtractSnips("~/.vim/snippets/html", "eruby")
+  call ExtractSnips("~/.vim/snippets/html", "xhtml")
+  call ExtractSnips("~/.vim/snippets/html", "php")
+endfunction

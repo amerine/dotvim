@@ -1,0 +1,37 @@
+"PLUGIN OPTIONS
+runtime macros/matchit.vim
+
+"bufexplorer
+let g:bufExplorerDetailedHelp=1     " show full help text by default
+"let g:bufExplorerShowRelativePath=1 " use relative paths
+let g:bufExplorerShowUnlisted=1     " display unlisted buffers
+
+"NERDCommenter
+let NERDCreateDefaultMappings=0 " disable default mappings
+let NERDMenuMode=0              " disable menu
+let NERDSpaceDelims=1           " place spaces after comment chars
+let NERDDefaultNesting=0        " don't recomment commented lines
+
+map <leader>cc <plug>NERDCommenterToggle
+map <leader>cC <plug>NERDCommenterSexy
+map <leader>cu <plug>NERDCommenterUncomment
+
+"NERDTree
+map <leader>d :NERDTreeToggle<cr>
+
+"Tabular
+" sets ,a to align = and => lines
+map <leader>a :Tabularize /=>\?<cr>
+
+"Taglist
+map <leader>t :TlistToggle<cr>
+
+"Specky
+let g:speckyBannerKey = "<C-S>b"
+let g:speckyQuoteSwitcherKey = "<C-S>'"
+let g:speckyRunRdocKey = "<C-S>r"
+let g:speckySpecSwitcherKey = "<C-S>x"
+let g:speckyRunSpecKey = "<C-S>s"
+let g:speckyRunSpecCmd = "spec -fs"
+let g:speckyRunRdocCmd = "fri -L -f plain"
+let g:speckyWindowType = 2

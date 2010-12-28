@@ -1,0 +1,41 @@
+"EDITING OPTIONS
+syntax on
+set number      " line numbers
+set showbreak=+ " display a + at the beginning of a wrapped line
+set showmatch   " flash the matching bracket on inserting a )]} etc
+
+" allow backspacing over everything in insert mode
+set backspace=indent,eol,start
+
+set softtabstop=2 " most of the time, we want a softtabstop of 2
+set tabstop=2     " show tabs with 2 spaces
+set shiftwidth=2  " shift by 2 spaces when using >> and <<, etc
+set expandtab     " no tabs
+
+" Using autocmd for this allows it to be reset every time you open a
+" file, which keeps overrides from being persistent
+autocmd FileType * set softtabstop=2 shiftwidth=2 tabstop=2 expandtab
+
+set list                     " show whitespace
+set listchars=tab:»·,trail:· " show tabs and trailing spaces
+set listchars+=extends:»     " show a » when a line goes off the right edge of the screen
+set listchars+=precedes:«    " show a « when a line goes off the left edge of the screen
+
+"FOLDING OPTIONS
+set foldenable       " enable folding
+set foldlevelstart=0 " start with all folds collapsed when switching buffers
+set foldcolumn=2     " adds two columns of fold status on the left-hand side of the screen
+
+"SEARCH OPTIONS
+set ignorecase " makes search patterns case-insensitive by default
+set smartcase  " overrides ignorecase when the pattern contains upper-case characters
+set incsearch
+
+"SWAP & UNDO OPTIONS
+" global swapfile directory
+set directory=~/.vim/swapfiles,/var/tmp,/tmp,.
+" persistent undo
+if has("persistent_undo")
+  set undofile
+  set undodir=~/.vim/undofiles,/var/tmp,/tmp,.
+endif

@@ -1,0 +1,51 @@
+"KEY BINDINGS
+let mapleader=',' " set leader to ,
+
+" format paragraphs (72 columns)
+map ^^ {!}par w72qrg<CR>
+
+" one-stroke window maximizing
+map <C-H> <C-W>h<C-W><BAR>
+map <C-L> <C-W>l<C-W><BAR>
+map <C-J> <C-W>j<C-W>_
+map <C-K> <C-W>k<C-W>_
+
+" quick buffer switching
+map <leader>[ :bprevious<CR>
+map <leader>] :bnext<CR>
+
+" shortcut to strip trailing whitespace
+map <leader>s :s/\s\+$//g<CR>
+
+" Replicate textmate CMD-[ and CMD-] for indentation
+nmap <D-[> <<
+nmap <D-]> >>
+vmap <D-[> <gv
+vmap <D-]> >gv
+
+" Replicate textmate shift arrow/movement in order to select stuff
+nmap <S-up> vk
+vmap <S-up> k
+nmap <S-k> vk
+vmap <S-k> k
+
+nmap <S-right> vl
+vmap <S-right> l
+nmap <S-l> vl
+vmap <S-l> l
+
+nmap <S-down> vj
+vmap <S-down> j
+nmap <S-j> vj
+vmap <S-j> j
+
+nmap <S-left> v
+vmap <S-left> h
+nmap <S-h> vh
+vmap <S-h> h
+
+" use command+r to execute my ruby code
+nmap <D-r> :!ruby %<CR>
+
+" retab the document (tabs to spaces)
+nmap <silent> <leader><S-t> :retab!<CR>

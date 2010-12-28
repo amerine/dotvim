@@ -1,0 +1,80 @@
+= Mark Turner's .vim
+
+Welcome to the magical world of my .vim. I use this setup every day and 
+finally decided to share it with the world... or at least my co-workers. 
+
+It is based primarily on the work of {Ben Bleything}[http://bleything.net], 
+the people that inspired him, and the crew at {Opscode}[http://opscode.com].  
+See the Credits section below for more details.
+
+== Installation
+
+Pretty straightforward.  Clone and symlink:
+
+  $ git clone git://github.com/amerine/dotvim.git ~/.vim
+  $ ln -s ~/.vim/vimrc ~/.vimrc
+
+Then install/update the bundles:
+
+  $ cd ~/.vim && rake update:bundles  
+
+The link the snippets:
+
+  $ cd ~/.vim/bundle/snipmate_snippets && rake install  
+
+== Basics
+
+* My personal settings
+* The {mustang}[http://www.deviantart.com/download/98974484/Mustang_Vim_Colorscheme_by_hcalves.vim] color scheme
+
+=== Plugins
+
+* {ack.vim}[http://www.vim.org/scripts/script.php?script_id=2572]
+* {Buffer Explorer}[http://www.vim.org/scripts/download_script.php?src_id=14208]
+* {CamelCaseMotion}[http://www.vim.org/scripts/script.php?script_id=1905]
+* {fugitive.vim}[https://github.com/tpope/vim-fugitive]
+* {NERD Commenter}[http://www.vim.org/scripts/download_script.php?src_id=14455]
+* {NERD Tree}[http://www.vim.org/scripts/download_script.php?src_id=11834]
+* {Pathogen}[http://www.vim.org/scripts/script.php?script_id=2332]
+* {ragtag.vim}[https://github.com/tpope/vim-ragtag]
+* {Rails}[https://github.com/tpope/vim-rails.git]
+* {Ruby-Refactoring}[https://github.com/ecomba/vim-ruby-refactoring]
+* {Snipmate}[https://github.com/msanders/snipmate.vim]
+* {Snipmate-snippets}[https://github.com/scrooloose/snipmate-snippets]
+* {Specky}[https://github.com/vim-scripts/Specky]
+* {surround.vim}[https://github.com/tpope/vim-surround]
+* {Tabular}[https://github.com/godlygeek/tabular]
+* {Taglist}[http://www.vim.org/scripts/script.php?script_id=273]
+
+=== Syntax
+
+* {Git}[http://www.vim.org/scripts/script.php?script_id=1654]
+* {vim-haml}[https://github.com/tpope/vim-haml]
+* {HTML5}[https://github.com/othree/html5-syntax.vim]
+* {JSON}[http://www.vim.org/scripts/script.php?script_id=1945]
+* {Markdown}[http://github.com/ujihisa/vim-markdown]
+* {nginx}[http://www.vim.org/scripts/script.php?script_id=1886]
+* {RDoc}[http://www.vim.org/scripts/script.php?script_id=2878]
+* {Textile}[http://www.vim.org/scripts/script.php?script_id=2305]
+
+== Credits
+
+[Ben Bleything]    Without Ben's amazing {dotvim}[https://github.com/bleything/dotvim] none of this would have 
+                   been possible. Thanks Ben! You should read his {blog}[http://bleything.net] and stalk him on
+                   {twitter}[http://twitter.com/bleything]. Also, buy him a beer whenever you can.
+
+[Mahlon Smith]     Responsible for getting me into vi in the first place and
+                   providing a ton of support, tips, and tricks over the years.
+                   You should go read {this blog post he wrote}[http://martini.nu/blog/2008/07/vim.html]
+                   about his vim setup.
+
+[Adam Jacob]       Upon whose config Joshua and AJ based their tweaks.
+                   Available on {the git hubs}[http://github.com/adamhjk/adam-vim].
+
+[Joshua Timberman] Various tweaks to Adam's config, available on {the git
+                   hubs}[http://github.com/jtimberman/dotvim].
+
+[AJ Christensen]   Various tweaks to Adam's config, available on {the git
+                   hubs}[http://github.com/fujin/dotvim].
+
+[Other Folks]      The authors of the plugins and syntax defined above.
