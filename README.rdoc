@@ -18,7 +18,7 @@ Then install/update the bundles:
 
   $ cd ~/.vim && rake update:bundles  
 
-The link the snippets:
+Then link the snippets:
 
   $ cd ~/.vim/bundle/snipmate_snippets && rake install  
 
@@ -69,12 +69,10 @@ The link the snippets:
                    about his vim setup.
 
 [Adam Jacob]       Upon whose config Joshua and AJ based their tweaks.
-                   Available on {the git hubs}[http://github.com/adamhjk/adam-vim].
+                   Available on {github}[http://github.com/adamhjk/adam-vim].
 
-[Joshua Timberman] Various tweaks to Adam's config, available on {the git
-                   hubs}[http://github.com/jtimberman/dotvim].
+[Joshua Timberman] Various tweaks to Adam's config, available on {github}[http://github.com/jtimberman/dotvim].
 
-[AJ Christensen]   Various tweaks to Adam's config, available on {the git
-                   hubs}[http://github.com/fujin/dotvim].
+[AJ Christensen]   Various tweaks to Adam's config, available on {github}[http://github.com/fujin/dotvim].
 
 [Other Folks]      The authors of the plugins and syntax defined above.
