@@ -23,7 +23,7 @@ namespace :update do
     :specky              => "git://github.com/vim-scripts/Specky.git",
     :surround            => "git://github.com/tpope/vim-surround.git",
     :tabular             => "git://github.com/godlygeek/tabular",
-    :taglist             => "http://www.vim.org/scripts/download_script.php?src_id=7701",
+    :taglist             => "git://github.com/vim-scripts/taglist.vim.git",
     :textobj_user        => "git://github.com/kana/vim-textobj-user.git",
     :textobj_rubyblock   => "git://github.com/nelstrom/vim-textobj-rubyblock.git",
 
