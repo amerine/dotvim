@@ -11,7 +11,7 @@ namespace :update do
   BUNDLES = {
     # plugins
     :ack                 => "git://github.com/mileszs/ack.vim.git",
-    :bufexplorer         => "http://www.vim.org/scripts/download_script.php?src_id=14208",
+    :bufexplorer         => "git://github.com/vim-scripts/bufexplorer.zip.git",
     :fugitive            => "git://github.com/tpope/vim-fugitive.git",
     :nerdcommenter       => "git://github.com/scrooloose/nerdcommenter.git",
     :nerdtree            => "git://github.com/scrooloose/nerdtree.git",
@@ -19,7 +19,7 @@ namespace :update do
     :rails               => "git://github.com/tpope/vim-rails.git",
     :ruby_refactoring    => "git://github.com/ecomba/vim-ruby-refactoring.git",
     :snipmate            => "git://github.com/msanders/snipmate.vim.git",
-    :snipmate_snippets   => "git@github.com:amerine/snipmate-snippets.git",
+    :snipmate_snippets   => "git://github.com/amerine/snipmate-snippets.git",
     :specky              => "git://github.com/vim-scripts/Specky.git",
     :surround            => "git://github.com/tpope/vim-surround.git",
     :tabular             => "git://github.com/godlygeek/tabular",
