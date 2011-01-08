@@ -1,4 +1,7 @@
 "WINDOW OPTIONS
+set background=dark " use colors suitable for dark backgrounds
+colorscheme torte   " use a default color scheme
+
 set ruler          " shows cursor position in the lower right
 set showcmd        " shows incomplete command to the left of the ruler
 set winminheight=0 " allow windows to be 0 lines tall
