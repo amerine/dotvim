@@ -69,8 +69,10 @@ namespace :update do
       end
 
       puts # blank line
-      puts "Removing the snippets included in snipmate"
-      rm_rf Pathname.new( ENV['HOME'] ) + '.vim' + 'bundle' + 'snipmate' + 'snippets'
+      if bundle == :snipmate
+        puts "Removing the snippets included in snipmate"
+        rm_rf Pathname.new( ENV['HOME'] ) + '.vim' + 'bundle' + 'snipmate' + 'snippets'
+      end
 
       puts # blank line
     end
