@@ -1,6 +1,4 @@
 .netrwhist
-
 swapfiles/*
 undofiles/*
-
 bundle/vim-peepopen
