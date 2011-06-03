@@ -36,3 +36,6 @@ let g:speckyRunSpecKey = "<C-S>s"
 let g:speckyRunSpecCmd = "spec -fs"
 let g:speckyRunRdocCmd = "fri -L -f plain"
 let g:speckyWindowType = 2
+
+"vim-gist
+let g:gist_clip_command = 'pbcopy'
