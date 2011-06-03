@@ -4,6 +4,9 @@ set number      " line numbers
 set showbreak=+ " display a + at the beginning of a wrapped line
 set showmatch   " flash the matching bracket on inserting a )]} etc
 
+" Remember more command history
+set history=1000
+
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
 
