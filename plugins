@@ -24,7 +24,8 @@ map <leader>d :NERDTreeToggle<cr>
 map <leader>a :Tabularize /=>\?<cr>
 
 "Taglist
-map <leader>t :TlistToggle<cr>
+" map <leader>t :TlistToggle<cr>
+let Tlist_Ctags_Cmd = '/usr/local/bin/ctags'
 
 "Specky
 let g:speckyBannerKey = "<C-S>b"
