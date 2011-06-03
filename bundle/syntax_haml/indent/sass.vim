@@ -17,8 +17,7 @@ if exists("*GetSassIndent")
   finish
 endif
 
-let s:property = '^\s*:\|^\s*[[:alnum:]#{}-]\+\%(:\|\s*=\)'
-let s:extend = '^\s*\%(@extend\|@include\|+\)'
+let s:property = '^\s*:\|^\s*[[:alnum:]-]\+\%(:\|\s*=\)'
 
 function! GetSassIndent()
   let lnum = prevnonblank(v:lnum-1)
@@ -28,7 +27,7 @@ function! GetSassIndent()
   let line = substitute(line,'^\s\+','','')
   let indent = indent(lnum)
   let cindent = indent(v:lnum)
-  if line !~ s:property && line !~ s:extend && cline =~ s:property
+  if line !~ s:property && cline =~ s:property
     return indent + &sw
   "elseif line =~ s:property && cline !~ s:property
     "return indent - &sw

@@ -1,1 +1,1 @@
-autocmd BufNewFile,BufRead *.json setf json
+autocmd BufRead,BufNewFile *.json set filetype=json

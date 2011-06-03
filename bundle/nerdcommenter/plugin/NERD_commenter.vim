@@ -208,7 +208,7 @@ let s:delimiterMap = {
     \ 'ldif': { 'left': '#' },
     \ 'lilo': { 'left': '#' },
     \ 'lilypond': { 'left': '%' },
-    \ 'liquid': { 'left': '{% comment %}', 'right': '{% endcomment %}' },
+    \ 'liquid': { 'left': '{%', 'right': '%}' },
     \ 'lisp': { 'left': ';', 'leftAlt': '#|', 'rightAlt': '|#' },
     \ 'llvm': { 'left': ';' },
     \ 'lotos': { 'left': '(*', 'right': '*)' },
