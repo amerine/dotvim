@@ -16,8 +16,8 @@ endif
 let g:loaded_nerdtree_fs_menu = 1
 
 call NERDTreeAddMenuItem({'text': '(a)dd a childnode', 'shortcut': 'a', 'callback': 'NERDTreeAddNode'})
-call NERDTreeAddMenuItem({'text': '(m)ove the curent node', 'shortcut': 'm', 'callback': 'NERDTreeMoveNode'})
-call NERDTreeAddMenuItem({'text': '(d)elete the curent node', 'shortcut': 'd', 'callback': 'NERDTreeDeleteNode'})
+call NERDTreeAddMenuItem({'text': '(m)ove the current node', 'shortcut': 'm', 'callback': 'NERDTreeMoveNode'})
+call NERDTreeAddMenuItem({'text': '(d)elete the current node', 'shortcut': 'd', 'callback': 'NERDTreeDeleteNode'})
 if g:NERDTreePath.CopyingSupported()
     call NERDTreeAddMenuItem({'text': '(c)copy the current node', 'shortcut': 'c', 'callback': 'NERDTreeCopyNode'})
 endif
@@ -57,7 +57,7 @@ function! NERDTreeAddNode()
     let newNodeName = input("Add a childnode\n".
                           \ "==========================================================\n".
                           \ "Enter the dir/file name to be created. Dirs end with a '/'\n" .
-                          \ "", curDirNode.path.str({'format': 'Glob'}) . g:NERDTreePath.Slash())
+                          \ "", curDirNode.path.str() . g:NERDTreePath.Slash())
 
     if newNodeName ==# ''
         call s:echo("Node Creation Aborted.")
