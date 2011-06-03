@@ -6,6 +6,8 @@ filetype plugin indent on
 autocmd FileType ruby,rdoc,cucumber,yaml,html,eruby set softtabstop=2 shiftwidth=2 tabstop=2
 autocmd BufNewFile,BufRead Gemfile     setfiletype ruby
 autocmd BufNewFile,BufRead config.ru   setfiletype ruby
+autocmd BufNewFile,BufRead *_spec.rb   compiler rspec
+let ruby_space_errors = 1
 
 " markdown files
 autocmd BufRead,BufNewFile *.mkd,*.markdown,*.md,*.mdown,*.mkdn set softtabstop=4 shiftwidth=4 tabstop=4
