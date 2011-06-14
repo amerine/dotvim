@@ -11,3 +11,10 @@ set lines=48
 "   c: don't pop up windows; use the console for dialog boxes and such
 "   e: use GUI tab bar instead of text tab bar
 set guioptions=ce
+
+" Set GUI Cursor Options
+highlight Cursor guifg=khaki guibg=Goldenrod3
+highlight iCursor guifg=khaki guibg=Goldenrod3
+
+" Highlight the cursor line
+set cursorline
