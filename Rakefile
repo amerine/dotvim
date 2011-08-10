@@ -34,7 +34,7 @@ namespace :update do
     :syntax_html5        => "git://github.com/othree/html5-syntax.vim.git",
     :syntax_json         => "git://github.com/leshill/vim-json.git",
     :syntax_markdown     => "git://github.com/ujihisa/vim-markdown.git",
-    :syntax_rdoc         => "git://github.com/hallison/vim-rdoc.git",
+    :syntax_rdoc         => "git://github.com/depuracao/vim-rdoc.git",
     :syntax_textile      => "git://github.com/timcharper/textile.vim.git"
   }
 
