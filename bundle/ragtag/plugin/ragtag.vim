@@ -1,5 +1,5 @@
 " ragtag.vim - Ghetto XML/HTML mappings (formerly allml.vim)
-" Author:       Tim Pope <vimNOSPAM@tpope.org>
+" Author:       Tim Pope <http://tpo.pe/>
 " Version:      2.0
 " GetLatestVimScripts: 1896 1 :AutoInstall: ragtag.vim
 
@@ -11,8 +11,9 @@ let g:loaded_ragtag = 1
 if has("autocmd")
   augroup ragtag
     autocmd!
-    autocmd FileType *html*,wml,xml,xslt,xsd,jsp    call s:Init()
+    autocmd FileType *html*,wml,jsp                 call s:Init()
     autocmd FileType php,asp*,cf,mason,eruby,liquid call s:Init()
+    autocmd FileType xml,xslt,xsd,docbk             call s:Init()
     if version >= 700
       autocmd InsertLeave * call s:Leave()
     endif
@@ -81,7 +82,7 @@ function! s:Init()
     if !exists("b:surround_101")
       let b:surround_101 = "[% \r %]\n[% END %]"
     endif
-  elseif &ft =~ "django" || &ft == "liquid"
+  elseif &ft =~ "django" || &ft == "liquid" || &ft == 'htmljinja'
     inoremap <buffer> <SID>ragtagOopen    {{<Space>
     inoremap <buffer> <SID>ragtagOclose   <Space>}}<Left><Left>
     inoremap <buffer> <C-X><Lt> {%
@@ -150,7 +151,7 @@ function! s:Init()
     inoremap <buffer> <C-X>'     <Lt>!--<Space><Space>--><Esc>3hi
     inoremap <buffer> <C-X>"     <C-V><NL><Esc>I<!--<Space><Esc>A<Space>--><Esc>F<NL>s
     let b:surround_35 = "<!-- \r -->"
-  elseif &ft == "django" || &ft == "htmldjango"
+  elseif &ft == "django" || &ft == "htmldjango" || &ft == 'htmljinja'
     inoremap <buffer> <C-X>'     {#<Space><Space>#}<Esc>2hi
     inoremap <buffer> <C-X>"     <C-V><NL><Esc>I<C-X>{#<Space><Esc>A<Space>#}<Esc>F<NL>s
     let b:surround_35 = "{# \r #}"
@@ -273,7 +274,7 @@ endfunction
 
 function! s:subtype()
   let top = getline(1)."\n".getline(2)
-  if (top =~ '<?xml\>' && &ft !~? 'html') || &ft =~? '^\%(xml\|xsd\|xslt\)$'
+  if (top =~ '<?xml\>' && &ft !~? 'html') || &ft =~? '^\%(xml\|xsd\|xslt\|docbk\)$'
     return "xml"
   elseif top =~? '\<xhtml\>'
     return 'xhtml'
