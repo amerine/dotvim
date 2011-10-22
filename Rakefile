@@ -14,7 +14,6 @@ namespace :update do
     :bufexplorer         => "git://github.com/vim-scripts/bufexplorer.zip.git",
     :fugitive            => "git://github.com/tpope/vim-fugitive.git",
     :gist                => "git://github.com/mattn/gist-vim.git",
-    :nerdcommenter       => "git://github.com/scrooloose/nerdcommenter.git",
     :nerdtree            => "git://github.com/scrooloose/nerdtree.git",
     :ragtag              => "git://github.com/tpope/vim-ragtag.git",
     :rails               => "git://github.com/tpope/vim-rails.git",
