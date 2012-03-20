@@ -1,5 +1,5 @@
 "GUI OPTIONS
-colorscheme vwilight
+colorscheme solarized
 set mouse=a
 set guifont=Inconsolata:h16 " Inconsolata, 16pt high
 

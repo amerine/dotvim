@@ -12,7 +12,7 @@ Usage:
 
         :Gist
 
-- Post selected text to gist, using defualt privacy option.
+- Post selected text to gist, using default privacy option.
   This applies to all permutations listed below (except multi).
 
         :'<,'>Gist
@@ -47,6 +47,12 @@ Usage:
 
         :Gist -e foo.js
 
+- Post/Edit with the description " (you need to have opened the gist buffer
+  first). >
+
+    :Gist -s something
+    :Gist -e -s something
+
 - Delete the gist (you need to have opened the gist buffer first).
   Password authentication is needed.
 
@@ -57,6 +63,16 @@ Usage:
 
         :Gist -f
  
+- Star the gist (you need to have opened the gist buffer first).
+  Password authentication is needed.
+
+        :Gist +1
+
+- Unstar the gist (you need to have opened the gist buffer first).
+  Password authentication is needed.
+
+        :Gist -1
+
 - Get gist XXXXX.
 
         :Gist XXXXX
@@ -76,6 +92,10 @@ Usage:
 - List all (public and private) of your gists.
 
         :Gist -la
+
+- List gists from your starred gists.
+
+        :Gist -ls
 
 Tips:
 -----
@@ -115,10 +135,28 @@ On windows, this should work with your user settings.
 If you want to show your private gists with ":Gist -l":
 
     let g:gist_show_privates = 1
+    
+If you want your gist to be private by default:
+
+    let g:gist_private = 1
 
 If you get problems when creating gists try:
 
 	:Gist --abandon
+
+You need to either set global git config
+
+	$ git config --global github.user Username
+	$ git config --global github.token APIToken
+
+or in your `.vimrc`
+
+    let g:github_token = 'XXXXX'
+
+or by using an environment variable on *nix systems
+    
+    let g:github_token = $GITHUB_TOKEN
+    
 
 Requirements:
 --------

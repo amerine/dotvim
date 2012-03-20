@@ -42,8 +42,11 @@ features:
   [NERDTree.vim](https://github.com/scrooloose/nerdtree).  If
   [dbext.vim](http://www.vim.org/scripts/script.php?script_id=356) is
   installed, it will be transparently configured to reflect
-  `database.yml`.  Cream users get some additional mappings, and all GUI
-  users get a menu.  `:help rails-integration`
+  `database.yml`.  Users of
+  [abolish.vim](https://github.com/tpope/vim-abolish) get pluralize and
+  tableize coercions, and users of
+  [bundler.vim](https://github.com/tpope/vim-bundler) get `bundle exec
+  rake`.  `:help rails-integration`
 
 Installation
 ------------
@@ -88,6 +91,25 @@ Of course.
 Baby, you can go all the way back to Rails 1 if you like (give or take
 some syntax highlighting).
 
+> Rake is slow.  How about making `:Rake` run
+> `testrb`/`rspec`/`cucumber` directly instead of `rake`?
+
+Well then it wouldn't make sense to call it `:Rake`, now, would it?
+Maybe one day I'll add a separate `:Run` command or something.  In the
+meantime, here's how you can set up `:make` to run the current test:
+
+    autocmd FileType cucumber compiler cucumber | setl makeprg=cucumber\ \"%:p\"
+    autocmd FileType ruby
+          \ if expand('%') =~# '_test\.rb$' |
+          \   compiler rubyunit | setl makeprg=testrb\ \"%:p\" |
+          \ elseif expand('%') =~# '_spec\.rb$' |
+          \   compiler rspec | setl makeprg=rspec\ \"%:p\" |
+          \ else |
+          \   compiler ruby | setl makeprg=ruby\ -wc\ \"%:p\" |
+          \ endif
+    autocmd User Bundler
+          \ if &makeprg !~ 'bundle' | setl makeprg^=bundle\ exec\  | endif
+
 Contributing
 ------------
 
@@ -95,9 +117,9 @@ If your [commit message sucks](http://stopwritingramblingcommitmessages.com/),
 I'm not going to accept your pull request.  I've explained very politely
 dozens of times that
 [my general guidelines](http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html)
-are absolute rules on on my own repositories, so I may lack the energy
-to explain it to you yet another time.  And please, if I ask you to
-change something, `git commit --amend`.
+are absolute rules on my own repositories, so I may lack the energy to
+explain it to you yet another time.  And please, if I ask you to change
+something, `git commit --amend`.
 
 Beyond that, don't be shy about asking before patching.  What takes you
 hours might take me minutes simply because I have both domain knowledge
@@ -119,4 +141,5 @@ you're feeling especially charitable, follow [tpope](http://tpo.pe/) on
 License
 -------
 
-Distributable under the same terms as Vim itself.  See `:help license`.
+Copyright (c) Tim Pope.  Distributed under the same terms as Vim itself.
+See `:help license`.

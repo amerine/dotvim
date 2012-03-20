@@ -2,3 +2,4 @@
 swapfiles/*
 undofiles/*
 bundle/vim-peepopen
+bundle/*
