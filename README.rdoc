@@ -16,7 +16,8 @@ Pretty straightforward.  Clone and symlink:
 
 Then install/update the bundles:
 
-  $ cd ~/.vim && rake update:bundles  
+  $ cd ~/.vim
+  $ git submodule update
 
 Then link the snippets:
 
