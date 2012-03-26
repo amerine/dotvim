@@ -13,3 +13,6 @@
 [submodule "bundle/commentary"]
 	path = bundle/commentary
 	url = git://github.com/tpope/vim-commentary.git
+[submodule "bundle/command-t"]
+	path = bundle/command-t
+	url = git://git.wincent.com/command-t.git
