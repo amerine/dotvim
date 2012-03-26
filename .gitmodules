@@ -61,3 +61,6 @@
 [submodule "bundle/syntax_handlebars"]
 	path = bundle/syntax_handlebars
 	url = https://github.com/nono/vim-handlebars.git
+[submodule "bundle/snipmate"]
+	path = bundle/snipmate
+	url = git://github.com/msanders/snipmate.vim.git
