@@ -24,6 +24,8 @@ set listchars=tab:»·,trail:· " show tabs and trailing spaces
 set listchars+=extends:»     " show a » when a line goes off the right edge of the screen
 set listchars+=precedes:«    " show a « when a line goes off the left edge of the screen
 
+set colorcolumn=80 " Highlight the last column
+
 "FOLDING OPTIONS
 set foldenable       " enable folding
 set foldlevelstart=0 " start with all folds collapsed when switching buffers
@@ -42,3 +44,6 @@ if has("persistent_undo")
   set undofile
   set undodir=~/.vim/undofiles,/var/tmp,/tmp,.
 endif
+
+"No Bells
+set noeb vb t_vb=
