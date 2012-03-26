@@ -82,3 +82,6 @@
 [submodule "bundle/textobj_rubyblock"]
 	path = bundle/textobj_rubyblock
 	url = git://github.com/nelstrom/vim-textobj-rubyblock.git
+[submodule "bundle/indent_javascript"]
+	path = bundle/indent_javascript
+	url = https://github.com/pangloss/vim-javascript.git
