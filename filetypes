@@ -16,6 +16,20 @@ autocmd BufRead,BufNewFile *.mkd,*.markdown,*.md,*.mdown,*.mkdn set noexpandtab
 " set filetype on config files
 autocmd BufNewFile,BufRead ~/.vim/*  setfiletype vim
 
+" set folding automatically to indent, fuck you, except for diffs
+autocmd BufNewFile,BufRead * set foldmethod=indent
+autocmd BufNewFile,BufRead *.diff set foldmethod=diff
+
+" use cursorcolumn in whitespace-sensitive file formats
+au Filetype coffee,python,haml,sass,slim set cursorcolumn
+
+" rubyisms
+autocmd FileType ruby
+      \ let b:AutoClosePairs = AutoClose#DefaultPairsModified("|", "")
+
+autocmd FileType html
+      \ let b:AutoClosePairs = AutoClose#DefaultPairsModified("<>", "")
+
 " set the snippets for rails/ruby projects
 autocmd vimenter * call s:SetupSnippets()
 function! s:SetupSnippets()

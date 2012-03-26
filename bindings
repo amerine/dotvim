@@ -10,6 +10,10 @@ map <C-L> <C-W>l<C-W><BAR>
 map <C-J> <C-W>j<C-W>_
 map <C-K> <C-W>k<C-W>_
 
+" keep selections when indenting in visual mode
+vnoremap > >gv
+vnoremap < <gv
+
 " quick buffer switching
 map <leader>[ :bprevious<CR>
 map <leader>] :bnext<CR>

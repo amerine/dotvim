@@ -32,3 +32,11 @@ let g:speckyWindowType = 2
 
 "vim-gist
 let g:gist_clip_command = 'pbcopy'
+
+
+" Fugitive and Vim
+" =============================================================================
+nnoremap <Leader>gs :Gstatus<CR>
+nnoremap <silent> <Leader>gd :w<CR>:Gdiff<CR><CR>
+nnoremap <Leader>gb :Gblame<CR>
+nnoremap <Leader>gw :Gw<CR>

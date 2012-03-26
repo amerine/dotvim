@@ -4,12 +4,15 @@ set number      " line numbers
 set showbreak=+ " display a + at the beginning of a wrapped line
 set showmatch   " flash the matching bracket on inserting a )]} etc
 
+set encoding=utf-8 nobomb
+
 " Remember more command history
 set history=1000
 
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
-
+set textwidth=80  " wrap at 80 characters
+set nowrap        " Text wrapping should be done manually
 set softtabstop=2 " most of the time, we want a softtabstop of 2
 set tabstop=2     " show tabs with 2 spaces
 set shiftwidth=2  " shift by 2 spaces when using >> and <<, etc
@@ -24,12 +27,28 @@ set listchars=tab:»·,trail:· " show tabs and trailing spaces
 set listchars+=extends:»     " show a » when a line goes off the right edge of the screen
 set listchars+=precedes:«    " show a « when a line goes off the left edge of the screen
 
-set colorcolumn=80 " Highlight the last column
+set scrolloff=5                       " minimum lines to show around cursor
+set sidescrolloff=5                   " min characters to show sideways
+
+set colorcolumn=+1 " Highlight the last column
+
+set formatoptions+=n1     " help fo-table
+                            " defaults: tcq
+                            " t: auto-wrap text using text-width
+                            " c: auto-wrap comments also
+                            " q: auto-format comments with 'gq'
+                            " n: recognize numbered lists
+                            " 1: don't break after 1-char word
+
+set formatprg="par -qe"     " use par for 'gq':
+                            " http://www.nicemice.net/par/par-doc.var
+                            " e: superfluous lines removed
+                            " q: separate quote levels with newlines
 
 "FOLDING OPTIONS
-set foldenable       " enable folding
-set foldlevelstart=0 " start with all folds collapsed when switching buffers
-set foldcolumn=2     " adds two columns of fold status on the left-hand side of the screen
+set foldmethod=indent                 " really the only way that makes sense
+set foldlevelstart=99                 " open all folds by default
+set foldignore=                       " don't try to be clever
 
 "SEARCH OPTIONS
 set ignorecase " makes search patterns case-insensitive by default
@@ -45,5 +64,14 @@ if has("persistent_undo")
   set undodir=~/.vim/undofiles,/var/tmp,/tmp,.
 endif
 
+" Backups (or lack thereof)
+set nobackup                          " do not keep backups after close
+set nowritebackup                     " do not keep backups while working
+set noswapfile                        " don't keep swap files either
+
 "No Bells
 set noeb vb t_vb=
+
+" ctags-related
+set tags+=../tags,../../tags,../../../tags,../../../../tags,tmp/tags
+map <silent> <Leader>r :!/usr/local/bin/ctags -f tags -R *<CR><CR>

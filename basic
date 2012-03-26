@@ -15,4 +15,14 @@ set wildmenu
 set cpoptions=aABceFsWZ
 set wildignore+=*.png,*.jpg,*.gif,*.ai,*.jpeg,*.psd,*.swp,*.jar,*.zip,*.gem,.DS_Store,log/**,tmp/**,coverage/**,rdoc/**
 set list
-set spell
+
+
+" Spelling
+set spell spelllang=en_us  " When you need it, you need it.
+" toggle spelling
+nnoremap <Leader>ss :setlocal spell!<CR>
+" n: next, p: previous, a: add, ?: suggest
+nnoremap <Leader>sn ]s
+nnoremap <Leader>sp ]p
+nnoremap <Leader>sa zg
+nnoremap <Leader>s? z=
