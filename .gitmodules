@@ -22,3 +22,6 @@
 [submodule "bundle/ruby-refactoring"]
 	path = bundle/ruby-refactoring
 	url = git://github.com/ecomba/vim-ruby-refactoring.git
+[submodule "bundle/snipmate_snippets"]
+	path = bundle/snipmate_snippets
+	url = git://github.com/akitaonrails/snipmate-snippets.git
