@@ -10,31 +10,13 @@ namespace :update do
 
   BUNDLES = {
     # plugins
-    :ack                 => "git://github.com/mileszs/ack.vim.git",
     :bufexplorer         => "git://github.com/vim-scripts/bufexplorer.zip.git",
-    :gist                => "git://github.com/mattn/gist-vim.git",
-    :nerdtree            => "git://github.com/scrooloose/nerdtree.git",
-    :ragtag              => "git://github.com/tpope/vim-ragtag.git",
-    :rails               => "git://github.com/tpope/vim-rails.git",
-    :ruby_refactoring    => "git://github.com/ecomba/vim-ruby-refactoring.git",
     :snipmate            => "git://github.com/msanders/snipmate.vim.git",
-    :snipmate_snippets   => "git://github.com/akitaonrails/snipmate-snippets.git",
     :specky              => "git://github.com/vim-scripts/Specky.git",
-    :surround            => "git://github.com/tpope/vim-surround.git",
     :tabular             => "git://github.com/godlygeek/tabular",
     :taglist             => "git://github.com/vim-scripts/taglist.vim.git",
     :textobj_user        => "git://github.com/kana/vim-textobj-user.git",
     :textobj_rubyblock   => "git://github.com/nelstrom/vim-textobj-rubyblock.git",
-    :vim_commentary      => "git://github.com/tpope/vim-commentary.git",
-
-    # syntax definitions
-    :syntax_git          => "git://github.com/tpope/vim-git.git",
-    :syntax_haml         => "git://github.com/tpope/vim-haml.git",
-    :syntax_html5        => "git://github.com/othree/html5-syntax.vim.git",
-    :syntax_json         => "git://github.com/leshill/vim-json.git",
-    :syntax_markdown     => "git://github.com/ujihisa/vim-markdown.git",
-    :syntax_rdoc         => "git://github.com/depuracao/vim-rdoc.git",
-    :syntax_textile      => "git://github.com/timcharper/textile.vim.git"
   }
 
   desc "update any bundles defined in the Rakefile"
