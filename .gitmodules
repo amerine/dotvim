@@ -85,3 +85,6 @@
 [submodule "bundle/indent_javascript"]
 	path = bundle/indent_javascript
 	url = https://github.com/pangloss/vim-javascript.git
+[submodule "bundle/supertab"]
+	path = bundle/supertab
+	url = https://github.com/ervandew/supertab.git
