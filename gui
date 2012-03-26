@@ -1,7 +1,7 @@
 "GUI OPTIONS
 colorscheme solarized
 set mouse=a
-set guifont=Inconsolata:h16 " Inconsolata, 16pt high
+set guifont=Monaco:h13
 
 " set default window size
 set columns=170
