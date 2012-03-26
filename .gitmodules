@@ -64,3 +64,21 @@
 [submodule "bundle/snipmate"]
 	path = bundle/snipmate
 	url = git://github.com/msanders/snipmate.vim.git
+[submodule "bundle/bufexplorer"]
+	path = bundle/bufexplorer
+	url = git://github.com/vim-scripts/bufexplorer.zip.git
+[submodule "bundle/specky"]
+	path = bundle/specky
+	url = git://github.com/vim-scripts/Specky.git
+[submodule "bundle/tabular"]
+	path = bundle/tabular
+	url = git://github.com/godlygeek/tabular.git
+[submodule "bundle/taglist"]
+	path = bundle/taglist
+	url = git://github.com/vim-scripts/taglist.vim.git
+[submodule "bundle/textobj_user"]
+	path = bundle/textobj_user
+	url = git://github.com/kana/vim-textobj-user.git
+[submodule "bundle/textobj_rubyblock"]
+	path = bundle/textobj_rubyblock
+	url = git://github.com/nelstrom/vim-textobj-rubyblock.git
