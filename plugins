@@ -2,9 +2,9 @@
 runtime macros/matchit.vim
 
 "bufexplorer
-let g:bufExplorerDetailedHelp=1     " show full help text by default
+let g:bufExplorerDetailedHelp=0     " show full help text by default
 "let g:bufExplorerShowRelativePath=1 " use relative paths
-let g:bufExplorerShowUnlisted=1     " display unlisted buffers
+let g:bufExplorerShowUnlisted=0     " display unlisted buffers
 
 "gist should be private
 let g:gist_private=1
