@@ -17,7 +17,7 @@ map <leader>d :NERDTreeToggle<cr>
 map <leader>a :Tabularize /=>\?<cr>
 
 "Taglist
-" map <leader>t :TlistToggle<cr>
+map <leader>t :TlistToggle<cr>
 let Tlist_Ctags_Cmd = '/usr/local/bin/ctags'
 
 "Specky
@@ -33,10 +33,14 @@ let g:speckyWindowType = 2
 "vim-gist
 let g:gist_clip_command = 'pbcopy'
 
-
 " Fugitive and Vim
 " =============================================================================
 nnoremap <Leader>gs :Gstatus<CR>
 nnoremap <silent> <Leader>gd :w<CR>:Gdiff<CR><CR>
 nnoremap <Leader>gb :Gblame<CR>
 nnoremap <Leader>gw :Gw<CR>
+
+" command-t
+nmap <unique> <silent> <Leader><Leader> :CommandT<CR>
+nmap <unique> <silent> <Leader><Leader><Leader> :CommandTFlush<CR>:CommandT<CR>
+let g:CommandTMatchWindowAtTop=1

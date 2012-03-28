@@ -18,6 +18,7 @@ set list
 
 
 " Spelling
+hi SpellErrors guibg=red guifg=black ctermbg=red ctermfg=black
 set spell spelllang=en_us  " When you need it, you need it.
 " toggle spelling
 nnoremap <Leader>ss :setlocal spell!<CR>

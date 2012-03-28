@@ -41,3 +41,6 @@ vmap <S-left> h
 
 " retab the document (tabs to spaces)
 nmap <silent> <leader><S-t> :retab!<CR>
+
+" ,e to find files.
+nmap <leader>e :e **/

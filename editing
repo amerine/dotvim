@@ -9,6 +9,16 @@ set encoding=utf-8 nobomb
 " Remember more command history
 set history=1000
 
+" Automatically read files that have changed on the FS but not in Vim.
+set autoread
+
+set completeopt=menuone,preview
+
+" omni completion settings
+set ofu=syntaxcomplete#Complete
+let g:rubycomplete_buffer_loading = 0
+let g:rubycomplete_classes_in_global = 1
+
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
 set textwidth=80  " wrap at 80 characters

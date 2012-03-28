@@ -1,7 +1,7 @@
 "WINDOW OPTIONS
 set background=dark " use colors suitable for dark backgrounds
 set t_Co=256
-colorscheme mustang   " use a default color scheme
+colorscheme Tomorrow-Night   " use a default color scheme
 
 set ruler          " shows cursor position in the lower right
 set showcmd        " shows incomplete command to the left of the ruler
