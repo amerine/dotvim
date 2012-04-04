@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>dotvim by amerine</title>
+    
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>dotvim</h1>
+        <p>My .vim settings, colorschemes, plugins, etc...</p>
+        <p class="view"><a href="https://github.com/amerine/dotvim">View the Project on GitHub <small>amerine/dotvim</small></a></p>
+        <ul>
+          <li><a href="https://github.com/amerine/dotvim/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/amerine/dotvim/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/amerine/dotvim">Fork On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h3>Mark Turner's .vim</h3>
+
+<p>Welcome to the magical world of my .vim. I use this setup every day and 
+finally decided to share it with the world... or at least my co-workers. </p>
+
+<h3>Installation</h3>
+
+<p>Pretty straightforward.  Clone and symlink:</p>
+
+<pre><code>$ git clone git://github.com/amerine/dotvim.git ~/.vim
+$ ln -s ~/.vim/vimrc ~/.vimrc
+</code></pre>
+
+<p>Then install/update the bundles:</p>
+
+<pre><code>$ cd ~/.vim
+$ git submodule update
+</code></pre>
+
+<p>Then link the snippets:</p>
+
+<pre><code>$ cd ~/.vim/bundle/snipmate_snippets &amp;&amp; rake install  
+</code></pre>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/amerine">amerine</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><!--<![endif]-->
+  </body>
+</html>
