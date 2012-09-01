@@ -109,3 +109,6 @@
 [submodule "bundle/vim_golang"]
 	path = bundle/vim_golang
 	url = https://github.com/jnwhiteh/vim-golang.git
+[submodule "bundle/vim-less"]
+	path = bundle/vim-less
+	url = https://github.com/groenewege/vim-less.git
