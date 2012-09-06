@@ -1,13 +1,16 @@
 "PLUGIN OPTIONS
 runtime macros/matchit.vim
 
+"powerline
+let g:Powerline_symbols = 'fancy'
+
 "bufexplorer
 let g:bufExplorerDetailedHelp=0     " show full help text by default
-"let g:bufExplorerShowRelativePath=1 " use relative paths
 let g:bufExplorerShowUnlisted=0     " display unlisted buffers
 
 "gist should be private
 let g:gist_private=1
+let g:gist_clip_command = 'pbcopy'
 
 "NERDTree
 map <leader>d :NERDTreeToggle<cr>
@@ -29,9 +32,6 @@ let g:speckyRunSpecKey = "<C-S>s"
 let g:speckyRunSpecCmd = "spec -fs"
 let g:speckyRunRdocCmd = "fri -L -f plain"
 let g:speckyWindowType = 2
-
-"vim-gist
-let g:gist_clip_command = 'pbcopy'
 
 " Fugitive and Vim
 " =============================================================================

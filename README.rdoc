@@ -24,6 +24,8 @@ Then link the snippets:
 
   $ cd ~/.vim/bundle/snipmate_snippets && rake install  
 
+Install the Monaco_Linux-Powerline.ttf font.
+
 == Basics
 
 * My personal settings
