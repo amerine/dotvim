@@ -1,5 +1,5 @@
 " Load plugins via pathogen
-call pathogen#runtime_append_all_bundles()
+call pathogen#infect()
 
 source $HOME/.vim/basic
 source $HOME/.vim/bindings
