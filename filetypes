@@ -23,6 +23,10 @@ autocmd BufNewFile,BufRead *.diff set foldmethod=diff
 " use cursorcolumn in whitespace-sensitive file formats
 au Filetype coffee,python,haml,sass,slim set cursorcolumn
 
+" sqf
+au BufRead,BufNewFile *.ext        setfiletype cpp
+au BufRead,BufNewFile *.sqf,*.sqs  setfiletype sqf
+
 " rubyisms
 autocmd FileType ruby
       \ let b:AutoClosePairs = AutoClose#DefaultPairsModified("|", "")
