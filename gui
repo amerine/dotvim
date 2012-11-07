@@ -1,7 +1,7 @@
 "GUI OPTIONS
 colorscheme Tomorrow-Night
 set mouse=a
-set guifont=Monaco\ for\ Powerline:h12
+set guifont=Monaco\ for\ Powerline:h11
 
 " set default window size
 set columns=170
