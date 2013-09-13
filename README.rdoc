@@ -1,5 +1,7 @@
 = Mark Turner's .vim
 
+= This is now defunct. See my {dotfiles}[http://github.com/amerine/dotfiles] for my new setup.
+
 Welcome to the magical world of my .vim. I use this setup every day and 
 finally decided to share it with the world... or at least my co-workers. 
 
